@@ -20,8 +20,8 @@ class Solution:
             current = current.next
 
         if list1:
-            current.next = list1
+            current.next = list1  # Attach all remaining nodes of list1
         else:
-            current.next = list2
+            current.next = list2 # Otherwise attach all remaining nodes of list2
 
         return dummy.next
