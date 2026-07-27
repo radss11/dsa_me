@@ -1,11 +1,12 @@
 class Solution(object):
     def twoSum(self, nums, target):
-        hashmap = {}  # value -> index
+        seen = {}
 
-        for i, num in enumerate(nums):
+        for i in range(len(nums)):
+            num = nums[i]
             complement = target - num
 
-            if complement in hashmap:
-                return [hashmap[complement], i]
+            if complement in seen:
+                return [seen[complement], i]
 
-            hashmap[num] = i
+            seen[num] = i
